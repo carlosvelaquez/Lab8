@@ -1,6 +1,8 @@
 package lab8;
 
 public class Mensaje {
+    final static long SerialVersionUID = 555L;
+    
     private Contacto receptor;
     private String emisor;
     private String fecha;

@@ -6,6 +6,11 @@
 package lab8;
 
 import java.awt.CardLayout;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -1776,6 +1781,39 @@ public class Main extends javax.swing.JFrame {
         }
         
         cbLlamar.setModel(cbm);
+    }
+    
+    public void guardarArchivo(){
+        try {
+            File f = new File("./contactos.sota");
+            FileOutputStream fos = new FileOutputStream(f);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for (Contacto c : contactos) {
+                oos.writeObject(c);
+            }
+            
+            oos.flush();
+            oos.close();
+            fos.close();
+            
+            f = new File("./mensajes.sota");
+            fos = new FileOutputStream(f);
+            oos = new ObjectOutputStream(fos);
+            
+            for (Mensaje m : mensajes) {
+                oos.writeObject(m);
+            }
+            
+            oos.flush();
+            oos.close();
+            fos.close();
+            
+        } catch (Exception e) {
+            System.out.println("Exception.");
+        }
+        
+        
     }
 
 }

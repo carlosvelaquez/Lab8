@@ -1,6 +1,10 @@
 package lab8;
 
-public class Contacto {
+import java.io.Serializable;
+
+public class Contacto implements Serializable{
+    final static long SerialVersionUID = 444L;
+    
     private String nombre;
     private String numero;
     private String correoElectronico;

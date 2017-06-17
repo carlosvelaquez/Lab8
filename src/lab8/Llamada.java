@@ -4,6 +4,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Llamada extends Thread{
+    
+    
     Contacto receptor;
     String duracion;
     String tipo;

@@ -1236,6 +1236,7 @@ public class Main extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         mostrar("cContactos");
         refrescarContactos();
+        guardarArchivo();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -1343,6 +1344,7 @@ public class Main extends javax.swing.JFrame {
         actualizarFiltros();
         actualizarLista();
         mostrar("cMensajes");
+        guardarArchivo();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void btNuevoMensajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNuevoMensajeActionPerformed
@@ -1382,6 +1384,7 @@ public class Main extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         llenarCBCon();
         mostrarDialogo(jdNuevaLlamada);
+        guardarArchivo();
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
